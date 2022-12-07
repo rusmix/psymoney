@@ -8,24 +8,12 @@ import {
 import { FindOrCreate } from '@typegoose/typegoose/lib/defaultClasses'
 
 @plugin(findorcreate)
-export class User extends FindOrCreate {
-  @prop({ required: true, index: true, unique: true })
-  id: number
+export class Photo extends FindOrCreate {
+  @prop({ index: true, unique: true })
+  id: string
 
   @prop({ index: true })
-  username: string
-
-  @prop({})
-  phone: string
-
-  @prop({})
-  name: string
-
-  @prop({ required: true, index: true, default: false })
-  isRegistred: boolean
-
-  @prop({ default: true })
-  isActive: boolean
+  number: number
 
   //   public static async doSomething(this: DocumentType<User>, id: number) {
   //     this.id = id
@@ -33,6 +21,6 @@ export class User extends FindOrCreate {
   //   }
 }
 
-export const UserModel = getModelForClass(User, {
+export const PhotoModel = getModelForClass(Photo, {
   schemaOptions: { timestamps: true },
 })

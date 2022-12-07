@@ -9,7 +9,7 @@ import { FindOrCreate } from '@typegoose/typegoose/lib/defaultClasses'
 
 @plugin(findorcreate)
 export class Video extends FindOrCreate {
-  @prop({ required: true, index: true, unique: true })
+  @prop({ index: true, unique: true })
   id: string
 
   @prop({ index: true })

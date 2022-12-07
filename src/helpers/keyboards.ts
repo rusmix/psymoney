@@ -10,8 +10,15 @@ export const adKeyboard = new InlineKeyboard().text(
   'initiateSecond'
 )
 
+export const urlKeyboard = new InlineKeyboard().url('Вебинар', 'google.com')
+
 export const phoneKeyboard = new Keyboard().requestContact(
-  'Отправить номер телефона'
+  'Поделиться контактом'
+)
+
+export const getFileKeyboard = new InlineKeyboard().text(
+  'Получить алгоритм',
+  'getFile'
 )
 
 export const webAppKeyboard = {

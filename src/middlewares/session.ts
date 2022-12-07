@@ -4,6 +4,7 @@ import Context from '@/models/Context'
 export enum State {
   getName = 'getName',
   getPhone = 'getPhone',
+  default = 'default',
 }
 
 export interface SessionData {
